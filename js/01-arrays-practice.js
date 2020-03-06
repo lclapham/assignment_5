@@ -26,10 +26,12 @@
 // movies[2] = "11/22/63";
 // movies[3] = "Employee of the Month";
 // movies[4] = "Shawn of the Dead";
-// movies[5] = "Blade Runner";
+// window.console.log("Before the splice the array was " +movies);
+// window.console.log("The array length is : "+ movies.length);
+// movies.splice(4, 0, "Blade Runner");
 
-// window.console.log(movies[0]);
-// window.console.log("The array lenght is : "+ movies.length);
+// window.console.log("After the sple the array was " +movies);
+// window.console.log("The array length is : "+ movies.length);
 
 //STEP 4
 // window.console.log("#### Step 4 ####")
@@ -50,15 +52,19 @@
 // }
 
 //STEP 6
-window.console.log("#### Step 6 ####");
+// window.console.log("#### Step 6 ####");
 
-let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
-for (a in movies) {
-    window.console.log(movies[a]);
-} 
-
+// let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// for (a in movies) {
+//     window.console.log(movies[a]);
+// }
 
 //STEP 7
+// window.console.log("#### Step 7 ####");
+// let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// for (a in movies.sort()) {
+//     window.console.log(movies[a]);
+// }
 
 //STEP 8
 
