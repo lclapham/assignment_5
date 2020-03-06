@@ -105,18 +105,45 @@
 // window.console.log(movies[movies.length -1]);
 
 //STEP 11
-window.console.log("#### Step 11 ####");
+// window.console.log("#### Step 11 ####");
+
+// let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
+// let movies = badMovies.concat(goodMovies);
+
+// window.console.log(movies.shift());
+
+
+//STEP 12
+window.console.log("#### Step 12 ####");
 
 let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
 let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
 let movies = badMovies.concat(goodMovies);
+let choice;
+let store;
+let replace;
 
-window.console.log(movies.shift());
+for (a in movies) {
+    window.document.write(movies[a]+"<br>");
+}
+ choice = window.prompt("Select from the list a movie you did not like.");
+ store = movies.indexOf(choice)
+ replace = window.prompt("Add a movie in it's place that you do like. ");
+
+ movies[store] = replace;
+ window.document.write("<br><br>The new list is: <br>");
+
+ for (a in movies) {
+    window.document.write(movies[a]+"<br>");
+}
 
 
-//STEP 12
 
-//STEP 13
+
+
+ 
+//STEP 13 
 
 //STEP 14
 
