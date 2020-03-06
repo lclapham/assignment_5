@@ -70,13 +70,14 @@
 window.console.log("#### Step 8 ####");
 
 let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
-let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"]
-window.console.log("Movies I Like: \n\n")
+let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
+
+window.console.log("Movies I Like: \n\n");
 for (let i = 0; i < goodMovies.length; i++){
     window.console.log(goodMovies[i]);
 }
 
-window.console.log("\n\nMovies I Regret Watching: \n\n")
+window.console.log("\n\nMovies I Regret Watching: \n\n");
 for (let i = 0; i < badMovies.length; i++){
     window.console.log(badMovies[i]);
 }
