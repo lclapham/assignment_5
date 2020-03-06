@@ -42,20 +42,21 @@
 // window.console.log("After the delete function the array contained " +movies);
 
 //STEP 5
-window.console.log("#### Step 5 ####");
+// window.console.log("#### Step 5 ####");
 
-let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
-for (let i = 0; i < movies.length; i++){
-    window.console.log(movies[i]);
-}
-
-// window.console.log("Before delete function the array contained " +movies);
-
-// delete(movies[0]);
-
-// window.console.log("After the delete function the array contained " +movies);
+// let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// for (let i = 0; i < movies.length; i++){
+//     window.console.log(movies[i]);
+// }
 
 //STEP 6
+window.console.log("#### Step 6 ####");
+
+let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+for (a in movies) {
+    window.console.log(movies[a]);
+} 
+
 
 //STEP 7
 
