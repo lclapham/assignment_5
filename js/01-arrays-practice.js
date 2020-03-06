@@ -42,10 +42,12 @@
 // window.console.log("After the delete function the array contained " +movies);
 
 //STEP 5
-window.console.log("#### Step 5 ####")
+window.console.log("#### Step 5 ####");
 
 let movies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
-
+for (let i = 0; i < movies.length; i++){
+    window.console.log(movies[i]);
+}
 
 // window.console.log("Before delete function the array contained " +movies);
 
