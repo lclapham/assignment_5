@@ -96,15 +96,23 @@
 // }
 
 //STEP 10
-window.console.log("#### Step 10 ####");
+// window.console.log("#### Step 10 ####");
+
+// let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
+// let movies = badMovies.concat(goodMovies);
+
+// window.console.log(movies[movies.length -1]);
+
+//STEP 11
+window.console.log("#### Step 11 ####");
 
 let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
 let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
 let movies = badMovies.concat(goodMovies);
 
-window.console.log(movies[movies.length -1]);
+window.console.log(movies.shift());
 
-//STEP 11
 
 //STEP 12
 
