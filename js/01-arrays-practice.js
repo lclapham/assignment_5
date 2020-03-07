@@ -189,6 +189,43 @@
 
 //STEP 15
 
+window.console.log("#### Step 15 ####");
+
+let employee1 = [];
+let employee2 = [];
+let employee3 = [];
+let employees = [];
+
+employee1["employeeid"] = 100;
+employee1["name"] = "John Doe";
+employee1["title"] = "CEO"
+employee1["department"] = "Tolletries";
+employee1["current"] = true;
+
+employee2["employeeid"] = 200;
+employee2["name"] = "Jane Doe";
+employee2["title"] = "President"
+employee2["department"] = "Tolletries";
+employee2["current"] = true;
+
+employee3["employeeid"] = 200;
+employee3["name"] = "Jane Doe";
+employee3["title"] = "President"
+employee3["department"] = "Tolletries";
+employee3["current"] = false;
+
+employees = [[employee1], [employee2], [employee3]];
+
+for (let i =0 ; i  < 3; i++){
+
+    if ((employees[i][0]["current"]) === true) {
+        window.console.log(employees[i][0]["name"] + " is a current employee.");
+    } else {
+        window.console.log(' ');
+        window.console.log(employees[i][0]["name"] + " is a former employee.");
+    }
+}
+
 //STEP 16
 
 //STEP 17
