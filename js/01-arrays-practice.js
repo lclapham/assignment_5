@@ -219,9 +219,11 @@ employees = [[employee1], [employee2], [employee3]];
 for (let i =0 ; i  < 3; i++){
 
     if ((employees[i][0]["current"]) === true) {
-        window.console.log(employees[i][0]["name"] + " is a current employee.");
+        window.console.log("Current Employees:");
+        window.console.log(employees[i][0]["name"]);
     } else {
         window.console.log(' ');
+        window.console.log("Former Employees:");
         window.console.log(employees[i][0]["name"] + " is a former employee.");
     }
 }
