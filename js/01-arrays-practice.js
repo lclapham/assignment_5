@@ -189,46 +189,59 @@
 
 //STEP 15
 
-window.console.log("#### Step 15 ####");
+// window.console.log("#### Step 15 ####");
 
-let employee1 = [];
-let employee2 = [];
-let employee3 = [];
-let employees = [];
+// let employee1 = [];
+// let employee2 = [];
+// let employee3 = [];
+// let employees = [];
 
-employee1["employeeid"] = 100;
-employee1["name"] = "John Doe";
-employee1["title"] = "CEO"
-employee1["department"] = "Tolletries";
-employee1["current"] = true;
+// employee1["employeeid"] = 100;
+// employee1["name"] = "John Doe";
+// employee1["title"] = "CEO"
+// employee1["department"] = "Tolletries";
+// employee1["current"] = true;
 
-employee2["employeeid"] = 200;
-employee2["name"] = "Jane Doe";
-employee2["title"] = "President"
-employee2["department"] = "Tolletries";
-employee2["current"] = true;
+// employee2["employeeid"] = 200;
+// employee2["name"] = "Jane Doe";
+// employee2["title"] = "President"
+// employee2["department"] = "Tolletries";
+// employee2["current"] = true;
 
-employee3["employeeid"] = 200;
-employee3["name"] = "Jane Doe";
-employee3["title"] = "President"
-employee3["department"] = "Tolletries";
-employee3["current"] = false;
+// employee3["employeeid"] = 200;
+// employee3["name"] = "Jane Doe";
+// employee3["title"] = "President"
+// employee3["department"] = "Tolletries";
+// employee3["current"] = false;
 
-employees = [[employee1], [employee2], [employee3]];
+// employees = [[employee1], [employee2], [employee3]];
 
-for (let i =0 ; i  < 3; i++){
+// for (let i =0 ; i  < 3; i++){
 
-    if ((employees[i][0]["current"]) === true) {
-        window.console.log("Current Employees:");
-        window.console.log(employees[i][0]["name"]);
-    } else {
-        window.console.log(' ');
-        window.console.log("Former Employees:");
-        window.console.log(employees[i][0]["name"] + " is a former employee.");
-    }
-}
+//     if ((employees[i][0]["current"]) === true) {
+//         window.console.log("Current Employees:");
+//         window.console.log(employees[i][0]["name"]);
+//     } else {
+//         window.console.log(' ');
+//         window.console.log("Former Employees:");
+//         window.console.log(employees[i][0]["name"] + " is a former employee.");
+//     }
+// }
 
 //STEP 16
+window.console.log("#### Step 16 ####");
+
+let movies = [["The Big Lebowski", 1], ["Shawn of the Dead", 2], ["Super Troopers", 3], ["Beer Fest", 4], ["Blade Runner", 5]];
+for (let i = 0; i < movies.length; i++) {
+    let movieNames = movies[i].filter(function (names) {
+        return typeof names === "string";
+    });
+
+    window.console.log(movieNames);
+}
+
+// window.console.log(typeof movies[0][0]);
+// if(movies(typeof movies[0][0]);)
 
 //STEP 17
 
