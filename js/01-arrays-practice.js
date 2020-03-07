@@ -115,37 +115,77 @@
 
 
 //STEP 12
-window.console.log("#### Step 12 ####");
+// window.console.log("#### Step 12 ####");
 
-let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
-let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
-let movies = badMovies.concat(goodMovies);
-let choice;
-let store;
-let replace;
+// let goodMovies = ["The Jungle", "The Big Lebowski", "11/22/63", "Employee of the Month", "Shawn of the Dead", "Super Troopers", "Beer Fest"];
+// let badMovies = ["Dune", "Attack of the 50' Woman", "Devil's Rejects"];
+// let movies = badMovies.concat(goodMovies);
+// let choice;
+// let store;
+// let replace;
 
-for (a in movies) {
-    window.document.write(movies[a]+"<br>");
-}
- choice = window.prompt("Select from the list a movie you did not like.");
- store = movies.indexOf(choice)
- replace = window.prompt("Add a movie in it's place that you do like. ");
+// for (a in movies) {
+//     window.document.write(movies[a]+"<br>");
+// }
+//  choice = window.prompt("Select from the list a movie you did not like.");
+//  store = movies.indexOf(choice)
+//  replace = window.prompt("Add a movie in it's place that you do like. ");
 
- movies[store] = replace;
- window.document.write("<br><br>The new list is: <br>");
+//  movies[store] = replace;
+//  window.document.write("<br><br>The new list is: <br>");
 
- for (a in movies) {
-    window.document.write(movies[a]+"<br>");
-}
+//  for (a in movies) {
+//     window.document.write(movies[a]+"<br>");
+// }
 
-
-
-
-
- 
 //STEP 13 
+// window.console.log("#### Step 13 ####");
+
+// let employee1 = [];
+// let employee2 = [];
+// let employees = [];
+
+// employee1["employeeid"] = 100;
+// employee1["name"] = "John Doe";
+// employee1["title"] = "CEO"
+// employee1["department"] = "Tolletries";
+// employee1["current"] = true;
+
+// employee2["employeeid"] = 200;
+// employee2["name"] = "Jane Doe";
+// employee2["title"] = "President"
+// employee2["department"] = "Tolletries";
+// employee2["current"] = false;
+
+// employees = [[employee1], [employee2]];
+
+// window.console.log(employees[1][0]["name"]);
 
 //STEP 14
+
+// window.console.log("#### Step 14 ####");
+
+// let employee1 = [];
+// let employee2 = [];
+// let employees = [];
+
+// employee1["employeeid"] = 100;
+// employee1["name"] = "John Doe";
+// employee1["title"] = "CEO"
+// employee1["department"] = "Tolletries";
+// employee1["current"] = true;
+
+// employee2["employeeid"] = 200;
+// employee2["name"] = "Jane Doe";
+// employee2["title"] = "President"
+// employee2["department"] = "Tolletries";
+// employee2["current"] = false;
+
+// employees = [[employee1], [employee2]];
+
+// for (let i =0 ; i  < 2; i++){
+//     window.console.log(employees[i][0]["name"]);
+// }
 
 //STEP 15
 
