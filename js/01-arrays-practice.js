@@ -229,21 +229,30 @@
 // }
 
 //STEP 16
-window.console.log("#### Step 16 ####");
+// window.console.log("#### Step 16 ####");
 
-let movies = [["The Big Lebowski", 1], ["Shawn of the Dead", 2], ["Super Troopers", 3], ["Beer Fest", 4], ["Blade Runner", 5]];
-for (let i = 0; i < movies.length; i++) {
-    let movieNames = movies[i].filter(function (names) {
-        return typeof names === "string";
-    });
+// let movies = [["The Big Lebowski", 1], ["Shawn of the Dead", 2], ["Super Troopers", 3], ["Beer Fest", 4], ["Blade Runner", 5]];
+// for (let i = 0; i < movies.length; i++) {
+//     let movieNames = movies[i].filter(function (names) {
+//         return typeof names === "string";
+//     });
 
-    window.console.log(movieNames);
-}
-
-// window.console.log(typeof movies[0][0]);
-// if(movies(typeof movies[0][0]);)
+//     window.console.log(movieNames);
+// }
 
 //STEP 17
+window.console.log("#### Step 17 ####");
+
+let employess = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
+
+let showEmployee = function (emp) {
+    window.console.log("Employees:\n\n")
+    for (let i = 0; i < emp.length; i++) {
+        window.console.log(emp[i].toUpperCase());
+    }
+};
+
+showEmployee(employess);
 
 //STEP 18
 
