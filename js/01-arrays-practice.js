@@ -243,7 +243,7 @@
 //STEP 17
 window.console.log("#### Step 17 ####");
 
-let employess = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
+let employees = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
 
 let showEmployee = function (emp) {
     window.console.log("Employees:\n\n")
@@ -252,7 +252,7 @@ let showEmployee = function (emp) {
     }
 };
 
-showEmployee(employess);
+showEmployee(employees);
 
 //STEP 18
 
