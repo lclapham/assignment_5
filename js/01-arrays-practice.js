@@ -241,20 +241,36 @@
 // }
 
 //STEP 17
-window.console.log("#### Step 17 ####");
+// window.console.log("#### Step 17 ####");
 
-let employees = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
+// let employees = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
 
-let showEmployee = function (emp) {
-    window.console.log("Employees:\n\n")
-    for (let i = 0; i < emp.length; i++) {
-        window.console.log(emp[i].toUpperCase());
-    }
-};
+// let showEmployee = function (emp) {
+//     window.console.log("Employees:\n\n")
+//     for (let i = 0; i < emp.length; i++) {
+//         window.console.log(emp[i].toUpperCase());
+//     }
+// };
 
-showEmployee(employees);
+// showEmployee(employees);
 
 //STEP 18
+window.console.log("#### Step 18 ####");
+
+let testData = [58, '', 'abcd', true, null, false, 0];
+
+function filter_array_values(arr) {
+    arr = arr.filter(isEligible);
+    return arr;
+  }
+  
+  function isEligible(value) {
+    if(value !== false || value !== null || value !== 0 || value !== "") {
+      return value;
+    }
+  }
+  
+window.console.log(filter_array_values(testData));
 
 //STEP 19
 
