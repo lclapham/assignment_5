@@ -259,18 +259,18 @@ window.console.log("#### Step 18 ####");
 
 let testData = [58, '', 'abcd', true, null, false, 0];
 
-function filter_array_values(arr) {
-    arr = arr.filter(isEligible);
+function filter_array(arr) {
+    arr = arr.filter(filter_For);
     return arr;
-  }
-  
-  function isEligible(value) {
-    if(value !== false || value !== null || value !== 0 || value !== "") {
-      return value;
+}
+
+function filter_For(value) {
+    if (value !== false || value !== null || value !== 0 || value !== "") {
+        return value;
     }
-  }
-  
-window.console.log(filter_array_values(testData));
+}
+
+window.console.log(filter_array(testData));
 
 //STEP 19
 
