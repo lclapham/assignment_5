@@ -255,23 +255,45 @@
 // showEmployee(employees);
 
 //STEP 18
-window.console.log("#### Step 18 ####");
+// window.console.log("#### Step 18 ####");
 
-let testData = [58, '', 'abcd', true, null, false, 0];
+// let testData = [58, '', 'abcd', true, null, false, 0];
 
-function filter_array(arr) {
-    arr = arr.filter(filter_For);
-    return arr;
-}
+// function filter_array(arr) {
+//     arr = arr.filter(filter_For);
+//     return arr;
+// }
 
-function filter_For(value) {
-    if (value !== false || value !== null || value !== 0 || value !== "") {
-        return value;
-    }
-}
+// function filter_For(value) {
+//     if (value !== false || value !== null || value !== 0 || value !== "") {
+//         return value;
+//     }
+// }
 
-window.console.log(filter_array(testData));
+// window.console.log(filter_array(testData));
 
 //STEP 19
+// window.console.log("#### Step 19 ####");
+
+// let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function myRandom(items) {
+
+//     return items[Math.floor(Math.random()*items.length)];
+// }
+
+// window.console.log("A random number between 1 and 10 is : " +myRandom(myArray));
+
 
 //STEP 20
+window.console.log("#### Step 20 ####");
+
+let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function sort_array(arr) {
+    arr.sort((x, y) => y - x);
+    return arr[0];
+
+}
+
+window.console.log(sort_array(myArray));
