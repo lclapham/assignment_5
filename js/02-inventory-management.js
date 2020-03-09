@@ -57,12 +57,6 @@ function show(arr) {
     }
 }
 
-
-
-
-
-
-
 displayMenu();
 
 
