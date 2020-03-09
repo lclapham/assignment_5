@@ -24,45 +24,18 @@ product4["cost"] = 70.00;
 
 let inventory = [[product1], [product2], [product3], [product4]];
 
-function displayMenu() {
-    window.console.log("Product Inventory Management System");
-    window.console.log(" ");
-    window.console.log("COMMAND MENU");
-    window.console.log("Show - Show inventory");
-    window.console.log("Add - Update stock");
-    window.console.log("Exit - Exit system");
-
-}
-
-
 
 function show(arr) {
     window.console.log(arr.length);
-    let data ;
+
     for (let i = 0; i < arr.length; i++){
-       data = ' ';
+       
         arr[i].forEach(element => {
-            for (property in element) {
-                
-                // console.log(typeof element);
-                // console.log(`${property}: ${object[property]}`);
-                
-                
-              data += element[property] + " ";
-            }
-                   
+            window.console.log(element);
+        
         });
-        // console.log(typeof data);
-        window.console.log(data);
+
     }
 }
 
-
-
-
-
-
-
-displayMenu();
-
-
+   
