@@ -6,11 +6,16 @@ let inventory = [[1000, "Shirt", 10, 10.00],
 [5000, "Ties", 50, 50.00],
 [6000, "Belts", 60, 60.00]]
 
-
+// Global Variables
 let arrayIndex;
 let skuIndex;
 let quantityIndex;
 let skuChoice;
+
+// This is the main program function
+function main() {
+    displayMenu()
+}
 
 // Display to the Command Options
 function displayMenu() {
@@ -19,15 +24,15 @@ function displayMenu() {
     window.console.log("COMMAND MENU");
     window.console.log("show(); - Show inventory");
     window.console.log("update(); - Update stock");
-    window.console.log("exit(); - Exit system");
+    window.console.log("exit(); - Exit system\n\n\n");
 
 }
 
 // Show the contents of the array as strings.
 function show() {
     let data;
-    inventory = localStorage.getItem("saveItems");
-    console.log(inventory);
+    console.log(localStorage.getItem("saveItems"));
+    console.log("The Data Inventory System Currently Holds|n\n")
     inventory.forEach(element => {
         data = ' ';
         for (item in element) {
@@ -35,6 +40,8 @@ function show() {
         }
         console.log(data);
     });
+    console.log('\n\n')
+    displayMenu();
 }
 
 // Perform the update command
@@ -106,5 +113,9 @@ function getIndexOfK(arr, k) {
     }
 }
 
-displayMenu();
+main()
+
+function exit() {
+    window.stop();
+}
 
