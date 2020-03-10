@@ -286,14 +286,14 @@
 
 
 //STEP 20
-window.console.log("#### Step 20 ####");
+// window.console.log("#### Step 20 ####");
 
-let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function sort_array(arr) {
-    arr.sort((x, y) => y - x);
-    return arr[0];
+// function sort_array(arr) {
+//     arr.sort((x, y) => y - x);
+//     return arr[0];
 
-}
+// }
 
-window.console.log(sort_array(myArray));
+// window.console.log(sort_array(myArray));

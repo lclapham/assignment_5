@@ -1,0 +1,93 @@
+// let product1 = new Object();
+// product1["sku"] = 001;
+// product1["description"] = "Tire";
+// product1["quantity"] = 4;
+// product1["cost"] = 65.99;
+
+// let product2 = new Object();
+// product2["sku"] = 002;
+// product2["description"] = "Engine";
+// product2["quantity"] = 3;
+// product2["cost"] = 2.00;
+
+// let product3 = new Object();
+// product3["sku"] = 003;
+// product3["description"] = "Windshield";
+// product3["quantity"] = 2;
+// product3["cost"] = 100.00;
+
+// let product4 = new Object();
+// product4["sku"] = 004;
+// product4["description"] = "Peppermints";
+// product4["quantity"] = 1000;
+// product4["cost"] = .25;
+
+// let product5 = new Object();
+// product4["sku"] = 005;
+// product4["description"] = "K-Bar";
+// product4["quantity"] = 14;
+// product4["cost"] = "$25.00";
+
+// let product6 = new Object();
+// product4["sku"] = 006;
+// product4["description"] = "Coronavirus Sample";
+// product4["quantity"] = 10;
+// product4["cost"] = 1005.00;
+
+// let inventory = [[product1], [product2], [product3], [product4], [product5], [product6]];
+
+
+//    for (let i = 0; i < inventory.length; i++) {
+//        inventory[i].forEach(item => {
+//          if (i === 0) {
+//               data0 = item;
+//          } else if (i === 1) {
+//               data1 = item;
+//          } else if (i === 2) {
+//               data2 = item;
+//          } else {
+//               data3 =item;
+//          }
+
+//        });
+
+//    }
+
+//    console.log(data0) ;
+//    inventory.forEach(item => {
+//     console.log(item);
+
+//     });
+// }
+
+//SIMPLIFING THE PROCESS
+// window.console.log(arr.length);
+// let data ;
+// for (let i = 0; i < arr.length; i++){
+//    data = ' ';
+//     arr[i].forEach(element => {
+//         for (property in element) {
+
+//             // console.log(typeof element);
+//             // console.log(`${property}: ${object[property]}`);
+
+
+//           data += element[property] + " " ;
+//         }
+
+//     });
+//     // console.log(typeof data);
+//     window.console.log(data);
+// }
+// }
+
+// function update() {
+//     let qtyUpdate = window.prompt("What item do you want to update")
+
+//     inventory[0][0]["quantity"] = 100;
+// }
+
+// function exit() {
+//     console.log("This is dumb")
+//     fail();
+// }
