@@ -4,7 +4,7 @@ let inventory = [[1000, "Shirt", 10, 10.00],
 [3000, "Shoes", 30, 30.00],
 [4000, "Socks", 40, 40.00],
 [5000, "Ties", 50, 50.00],
-[6000, "Belts", 60, 60.00]]
+[6000, "Belts", 60, 60.10]]
 
 // Global Variables
 let arrayIndex;
@@ -12,10 +12,6 @@ let skuIndex;
 let quantityIndex;
 let skuChoice;
 
-// This is the main program function
-function main() {
-    displayMenu()
-}
 
 // Display to the Command Options
 function displayMenu() {
@@ -28,20 +24,34 @@ function displayMenu() {
 
 }
 
+
+
+// This code was garbarge, but sorta worked.
+// function show() {
+//     let data;
+//     console.log(localStorage.getItem("saveItems"));
+//     console.log("The Data Inventory System Currently Holds|n\n")
+//     inventory.forEach(element => {
+//         data = ' ';
+//         for (item in element) {
+//             data += element[item] + " ";
+//         }
+//         console.log(data);
+//     });
+//     console.log('\n\n')
+//     displayMenu();
+// }
+
 // Show the contents of the array as strings.
-function show() {
-    let data;
-    console.log(localStorage.getItem("saveItems"));
-    console.log("The Data Inventory System Currently Holds|n\n")
-    inventory.forEach(element => {
-        data = ' ';
-        for (item in element) {
-            data += element[item] + " ";
-        }
-        console.log(data);
-    });
-    console.log('\n\n')
-    displayMenu();
+function show(inventory) {
+    let i;
+    for (i = 0; i < inventory.length; i++) {
+
+        window.console.log(inventory[i][0] + '\t' +
+            inventory[i][1] + '\t' + '(' +
+            inventory[i][2] + ') ' + ' $' +
+            inventory[i][3].toFixed(2));
+    }
 }
 
 // Perform the update command
@@ -50,7 +60,7 @@ function getUserSku() {
     let again = true;
     do {
         skuChoice = parseInt(window.prompt("Enter a SKU number from the list to update \n" + "SKU :" + inventory[0][0] + ', '
-            + inventory[1][0] + ', '
+            + inventory[1][0] + ', ' // Show user available options
             + inventory[2][0] + ', '
             + inventory[3][0] + ', '
             + inventory[4][0] + ', '
@@ -59,7 +69,7 @@ function getUserSku() {
         if (isNaN(skuChoice)) {
             console.log("You must enter one of the SKU numbers from the list.")
 
-        } else if (skuChoice === inventory[0][0] ||
+        } else if (skuChoice === inventory[0][0] || // If user choice matches don't run this again
             skuChoice === inventory[1][0] ||
             skuChoice === inventory[2][0] ||
             skuChoice === inventory[3][0] ||
@@ -75,7 +85,7 @@ function getUserSku() {
 
     } while (again)
 
-    return skuChoice;
+    return skuChoice;  // Pass along the skuChoice
 }
 
 function update() {
@@ -94,9 +104,28 @@ function update() {
 
         } else {
             inventory[arrayIndex][skuIndex + 2] = quantityUpdate;
-            show();
+            show(inventory);
+            let nuts = [];
             // Set the inventory to locol storage
-            localStorage.setItem("saveItems", inventory);
+
+            for (let i = 0; i < inventory.length; i++)
+                Storage.prototype.setObj = function (key, obj) {
+                    return this.setItem(key, JSON.stringify(obj))
+                }
+
+
+
+            Storage.prototype.getObj = function (key) {
+                return JSON.parse(this.getItem(key))
+            }
+
+
+
+            // localStorage.setItem("saveItems", inventory);
+            for (let i = 0; i < 4; i++) {
+                nuts.push.localStorage[i]("saveItems");
+                console.log(nuts);
+            }
             again = false;
         }
     } while (again)
@@ -113,9 +142,35 @@ function getIndexOfK(arr, k) {
     }
 }
 
-main()
+// This is the main program function
+let run = true;
 
-function exit() {
-    window.stop();
-}
+window.addEventListener('load', () => {
+    let inventory, command;
+   
+    displayMenu()
 
+    while (true) {
+        command = window.prompt('Enter command');
+        
+        if (command === 'show') {
+            console.log('hello world')
+            show(inventory);
+
+        } else if (command === 'update') {
+          update();
+
+        } else if (command === 'exit') {
+            console.log("In exit")
+            run = false;
+           return false;
+
+        } else {
+            window.alert("Not a valid command");
+        }
+        console.log(run)
+        run = false;
+        console.log(run)
+            }
+
+});
