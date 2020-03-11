@@ -146,31 +146,29 @@ function getIndexOfK(arr, k) {
 let run = true;
 
 window.addEventListener('load', () => {
-    let inventory, command;
-   
+    let inventory, command, i = 0;
+
     displayMenu()
 
-    while (true) {
+    while (i < 1) {
         command = window.prompt('Enter command');
-        
+
         if (command === 'show') {
             console.log('hello world')
             show(inventory);
 
         } else if (command === 'update') {
-          update();
+            update();
 
         } else if (command === 'exit') {
             console.log("In exit")
             run = false;
-           return false;
+            return false;
 
         } else {
             window.alert("Not a valid command");
         }
-        console.log(run)
-        run = false;
-        console.log(run)
-            }
+        i = 1;
+    }
 
 });
