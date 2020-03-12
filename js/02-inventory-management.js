@@ -132,8 +132,8 @@ window.addEventListener('load', () => {
 
     displayMenu();
     storage = localGet();
-
-    if (storage.length === 0) {
+  
+    if (storage === null) {
         localStore();
     } else {
         console.log("User has previous data stored")
@@ -145,12 +145,13 @@ window.addEventListener('load', () => {
 
         command = window.prompt('Enter command');
 
-        if (command === 'show') {
+        if (command === 'show' || command === "Show") {
             show();
-        } else if (command === 'update') {
+        } else if (command === 'update' || command === 'Update') {
             update();
-        } else if (command === 'exit') {
+        } else if (command === 'exit' || command === 'Exit' || command === null) {
             i = 1;
+            window.open('goodbye.html');
         } else {
             window.alert("Not a valid command");
         }
