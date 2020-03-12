@@ -12,6 +12,9 @@ let skuIndex;
 let quantityIndex;
 let skuChoice;
 
+let $ = (id) => {
+    return window.document.getElementById(id);
+}
 
 // Display to the Command Options
 function displayMenu() {
@@ -27,32 +30,10 @@ function displayMenu() {
 
 }
 
-let $ = (id) => {
-    return window.document.getElementById(id);
-}
-
-// $('items').innerHTML = "Hello World";
-
-// This code was garbarge, but sorta worked.
-// function show() {
-//     let data;
-//     console.log(localStorage.getItem("saveItems"));
-//     console.log("The Data Inventory System Currently Holds|n\n")
-//     inventory.forEach(element => {
-//         data = ' ';
-//         for (item in element) {
-//             data += element[item] + " ";
-//         }
-//         console.log(data);
-//     });
-//     console.log('\n\n')
-//     displayMenu();
-// }
-
 // Show the contents of the array as strings.
 function show() {
-    inventory = localGet();
-    $('items').innerHTML = " ";
+    inventory = localGet(); //Use the stuff from local storage
+    $('items').innerHTML = " "; //post it to the page
     let i;
     for (i = 0; i < inventory.length; i++) {
 
@@ -64,7 +45,6 @@ function show() {
 }
 
 // Perform the update command
-
 function getUserSku() {
     let again = true;
     do {
@@ -98,13 +78,12 @@ function getUserSku() {
 }
 
 function update() {
-    // The get sku function
-    getUserSku();
 
-    // Call the index finder
-    getIndexOfK(inventory, skuChoice);
+    getUserSku();// The get sku function  (Added feature)
 
-    //Prompt the user for the inventory update
+    getIndexOfK(inventory, skuChoice);  // Call the array index finder
+
+    //Prompt the user for the inventory update and keep prompting them until the do it right
     do {
         let quantityUpdate = parseInt(window.prompt("SkU: " + skuChoice + " current quantity on hand is :" + inventory[arrayIndex][skuIndex + 2] + "." + " Enter update for quantity."));
         if (isNaN(quantityUpdate)) {
@@ -125,7 +104,7 @@ function update() {
 
 }
 
-// Total don't know what this does but it works. Stole this cause I don't get localstorage.
+// Local Storage with formatting
 function localStore() {
     window.localStorage.setItem('dataStore', JSON.stringify(inventory));
 }
@@ -135,15 +114,17 @@ function localGet() {
 }
 
 
-function getIndexOfK(arr, k) {
+// This is the array index finder.  This iterates the array to find the index of the users inputed sku
+function getIndexOfK(arr, sku) {
     for (let i = 0; i < arr.length; i++) {
-        let index = arr[i].indexOf(k);
+        let index = arr[i].indexOf(sku);
         if (index > -1) {
             arrayIndex = i;
             skuIndex = index;
         }
     }
 }
+
 
 // This is the main program function
 let run = true;
@@ -157,26 +138,23 @@ window.addEventListener('load', () => {
     if (storage.length === 0) {
         localStore();
     } else {
-        console.log("heere you are")
+        console.log("User has previous data stored")
     }
 
     let i = 0;
 
     while (i < 1) {
+
         command = window.prompt('Enter command');
-        console.log("at the top "+ i);
+
         if (command === 'show') {
             show();
         } else if (command === 'update') {
             update();
         } else if (command === 'exit') {
-            console.log("In exit" + i)
             i = 1;
-            console.log(i);
         } else {
             window.alert("Not a valid command");
         }
-
     }
-console.log("I am not in the while")
 });
