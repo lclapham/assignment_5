@@ -22,9 +22,16 @@ function displayMenu() {
     window.console.log("update(); - Update stock");
     window.console.log("exit(); - Exit system\n\n\n");
 
+    $('commands').innerHTML =
+        "show - Show inventory<br>update - Update stock<br>exit - Exit system"
+
 }
 
+let $ = (id) => {
+    return window.document.getElementById(id);
+}
 
+// $('items').innerHTML = "Hello World";
 
 // This code was garbarge, but sorta worked.
 // function show() {
@@ -43,14 +50,16 @@ function displayMenu() {
 // }
 
 // Show the contents of the array as strings.
-function show(inventory) {
+function show() {
+    inventory = localGet();
+    $('items').innerHTML = " ";
     let i;
     for (i = 0; i < inventory.length; i++) {
 
-        window.console.log(inventory[i][0] + '\t' +
+        $('items').innerHTML += inventory[i][0] + '\t' +
             inventory[i][1] + '\t' + '(' +
             inventory[i][2] + ') ' + ' $' +
-            inventory[i][3].toFixed(2));
+            inventory[i][3].toFixed(2) + "<br>";
     }
 }
 
@@ -104,33 +113,27 @@ function update() {
 
         } else {
             inventory[arrayIndex][skuIndex + 2] = quantityUpdate;
+            localStore();
+
+            $('items').innerHTML = " ";
             show(inventory);
             let nuts = [];
-            // Set the inventory to locol storage
 
-            for (let i = 0; i < inventory.length; i++)
-                Storage.prototype.setObj = function (key, obj) {
-                    return this.setItem(key, JSON.stringify(obj))
-                }
-
-
-
-            Storage.prototype.getObj = function (key) {
-                return JSON.parse(this.getItem(key))
-            }
-
-
-
-            // localStorage.setItem("saveItems", inventory);
-            for (let i = 0; i < 4; i++) {
-                nuts.push.localStorage[i]("saveItems");
-                console.log(nuts);
-            }
             again = false;
         }
     } while (again)
 
 }
+
+// Total don't know what this does but it works. Stole this cause I don't get localstorage.
+function localStore() {
+    window.localStorage.setItem('dataStore', JSON.stringify(inventory));
+}
+
+function localGet() {
+    return JSON.parse(window.localStorage.getItem('dataStore'));
+}
+
 
 function getIndexOfK(arr, k) {
     for (let i = 0; i < arr.length; i++) {
@@ -146,29 +149,34 @@ function getIndexOfK(arr, k) {
 let run = true;
 
 window.addEventListener('load', () => {
-    let inventory, command, i = 0;
+    let storage, command;
 
-    displayMenu()
+    displayMenu();
+    storage = localGet();
+
+    if (storage.length === 0) {
+        localStore();
+    } else {
+        console.log("heere you are")
+    }
+
+    let i = 0;
 
     while (i < 1) {
         command = window.prompt('Enter command');
-
+        console.log("at the top "+ i);
         if (command === 'show') {
-            console.log('hello world')
-            show(inventory);
-
+            show();
         } else if (command === 'update') {
             update();
-
         } else if (command === 'exit') {
-            console.log("In exit")
-            run = false;
-            return false;
-
+            console.log("In exit" + i)
+            i = 1;
+            console.log(i);
         } else {
             window.alert("Not a valid command");
         }
-        i = 1;
-    }
 
+    }
+console.log("I am not in the while")
 });
