@@ -113,7 +113,6 @@ function localGet() {
     return JSON.parse(window.localStorage.getItem('dataStore'));
 }
 
-
 // This is the array index finder.  This iterates the array to find the index of the users inputed sku
 function getIndexOfK(arr, sku) {
     for (let i = 0; i < arr.length; i++) {
@@ -124,7 +123,6 @@ function getIndexOfK(arr, sku) {
         }
     }
 }
-
 
 // This is the main program function
 let run = true;
